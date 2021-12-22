@@ -4,6 +4,7 @@ package Alien::libmaxminddb;
 
 use 5.016;
 use warnings;
+use utf8;
 
 our $VERSION = 1.000;
 

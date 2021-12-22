@@ -4,6 +4,7 @@
 
 use 5.016;
 use warnings;
+use utf8;
 
 use Test::More;
 use Test::Alien;

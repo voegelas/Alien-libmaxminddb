@@ -32,6 +32,7 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Alien::Base" => 0,
     "parent" => 0,
+    "utf8" => 0,
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
@@ -54,6 +55,7 @@ my %FallbackPrereqs = (
   "Test::Alien" => 0,
   "Test::More" => 0,
   "parent" => 0,
+  "utf8" => 0,
   "warnings" => 0
 );
 

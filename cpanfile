@@ -4,6 +4,7 @@
 requires "Alien::Base" => "0";
 requires "parent" => "0";
 requires "perl" => "5.016";
+requires "utf8" => "0";
 requires "warnings" => "0";
 
 on 'build' => sub {

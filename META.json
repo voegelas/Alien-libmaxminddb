@@ -49,6 +49,7 @@
             "Alien::Base" : "0",
             "parent" : "0",
             "perl" : "5.016",
+            "utf8" : "0",
             "warnings" : "0"
          }
       },
