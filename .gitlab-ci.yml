@@ -1,11 +1,10 @@
 image: voegelas/perl-devel-cover
 
 before_script:
-  - cpanm --installdeps .
+  - cpanm --quiet --notest --installdeps .
 
 test_job:
   script:
     - perl Makefile.PL
     - make
-    - env HARNESS_PERL_SWITCHES=-MDevel::Cover prove -b
-    - cover
+    - cover -test
