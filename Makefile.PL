@@ -8,7 +8,7 @@ use warnings;
 use 5.016;
 use ExtUtils::MakeMaker;
 
-die "Unsupported OS\n" if $^O eq 'MSWin32' && !eval { require Alien::MSYS };
+die "OS unsupported\n" if $^O eq 'MSWin32' && !eval { require Alien::MSYS };
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Find or download and install libmaxminddb",

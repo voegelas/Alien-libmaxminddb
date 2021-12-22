@@ -30,4 +30,10 @@ on 'develop' => sub {
   requires "Dist::Zilla::Plugin::AlienBuild" => "0";
   requires "Dist::Zilla::Plugin::CopyFilesFromBuild" => "0";
   requires "Dist::Zilla::Plugin::MakeMaker::Awesome" => "0.26";
+  requires "Dist::Zilla::Plugin::MetaProvides::Package" => "0";
+  requires "Dist::Zilla::Plugin::Test::Kwalitee" => "0";
+  requires "Pod::Coverage::TrustPod" => "0";
+  requires "Test::Kwalitee" => "1.21";
+  requires "Test::Pod" => "1.41";
+  requires "Test::Pod::Coverage" => "1.08";
 };
