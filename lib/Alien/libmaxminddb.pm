@@ -25,11 +25,24 @@ version 1.000
 
 =head1 SYNOPSIS
 
-Install L<Dist::Zilla::Plugin::AlienBase::Wrapper> and add the library to your
-F<dist.ini>.
+Add the library to your F<dist.ini> if you use Dist::Zilla.
 
-  [AlienBase::Wrapper]
-  alien = Alien::libmaxminddb
+  [@Filter]
+  -bundle = @Basic
+  -remove = MakeMaker
+
+  [Prereqs / ConfigureRequires]
+  Alien::libmaxminddb = 0
+
+  [MakeMaker::Awesome]
+  header = use Config;
+  header = use Alien::libmaxminddb;
+  WriteMakefile_arg = CCFLAGS => Alien::libmaxminddb->cflags . ' ' . $Config{ccflags}
+  WriteMakefile_arg = LIBS => [ Alien::libmaxminddb->libs ]
+
+  [Prereqs / DevelopRequires]
+  Dist::Zilla = 0
+  Dist::Zilla::Plugin::MakeMaker::Awesome = 0
 
 =head1 DESCRIPTION
 
@@ -53,7 +66,8 @@ None.
 
 =head1 DEPENDENCIES
 
-Requires Alien::Build from CPAN.  Alien::MSYS is required on Windows.
+Requires Alien::Build from CPAN.  On Windows, Alien::MSYS needs to be
+installed.
 
 Install the package C<libmaxminddb-devel> or C<libmaxminddb-dev> if you would
 like to use your operating system's libmaxminddb library.
@@ -64,7 +78,7 @@ None.
 
 =head1 SEE ALSO
 
-L<Alien::Base>, L<Dist::Zilla::Plugin::AlienBase::Wrapper>
+L<Alien::Base>
 
 =head1 AUTHOR
 
@@ -72,7 +86,7 @@ Andreas Vögele E<lt>voegelas@cpan.orgE<gt>
 
 =head1 BUGS AND LIMITATIONS
 
-None known.
+libmaxminddb uses 64-bit integers.
 
 =head1 LICENSE AND COPYRIGHT
 
