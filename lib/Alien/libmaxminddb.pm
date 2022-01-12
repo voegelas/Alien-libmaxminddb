@@ -46,7 +46,7 @@ Add the library to your F<dist.ini> if you use Dist::Zilla.
 
 =head1 DESCRIPTION
 
-L<DP-IP.com|https://db-ip.com/> and L<MaxMind|https://www.maxmind.com/>
+L<MaxMind|https://www.maxmind.com/> and L<DP-IP.com|https://db-ip.com/>
 provide geolocation databases in the MaxMind DB file format format.  This Perl
 module finds or downloads and installs the C library
 L<libmaxminddb|https://github.com/maxmind/libmaxminddb>, which can read
@@ -78,7 +78,7 @@ None.
 
 =head1 SEE ALSO
 
-L<Alien::Base>
+L<Alien::Base>, L<IP::Geolocation::MMDB>
 
 =head1 AUTHOR
 

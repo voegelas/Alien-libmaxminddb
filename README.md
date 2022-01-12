@@ -1,10 +1,10 @@
 # Alien::libmaxminddb
 
-[DP-IP.com](https://db-ip.com/) and [MaxMind](https://www.maxmind.com/) provide
-geolocation databases in the MaxMind DB file format format.  This Perl module
-finds or downloads and installs the C library
-[libmaxminddb](https://github.com/maxmind/libmaxminddb), which can read MaxMind
-DB files.
+[MaxMind](https://www.maxmind.com/) and [DP-IP.com](https://db-ip.com/)
+provide geolocation databases in the MaxMind DB file format format.  This Perl
+module finds or downloads and installs the C library
+[libmaxminddb](https://github.com/maxmind/libmaxminddb), which can read
+MaxMind DB files.
 
 ## DEPENDENCIES
 
