@@ -66,11 +66,12 @@ None.
 
 =head1 DEPENDENCIES
 
-Requires L<Alien::Build> from CPAN.  On Windows, L<Alien::MSYS> needs to be
-installed.
+Requires L<Alien::Build> from CPAN.
 
 Install the package C<libmaxminddb-devel> or C<libmaxminddb-dev> if you would
 like to use your operating system's libmaxminddb library.
+
+Windows is not supported.  Please do not ask for Windows support.
 
 =head1 INCOMPATIBILITIES
 

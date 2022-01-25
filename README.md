@@ -8,11 +8,12 @@ MaxMind DB files.
 
 ## DEPENDENCIES
 
-Requires Alien::Build from CPAN.  On Windows, Alien::MSYS needs to be
-installed.
+Requires Alien::Build from CPAN.
 
 Install the package libmaxminddb-devel or libmaxminddb-dev if you would like to
 use your operating system's libmaxminddb library.
+
+Windows is not supported.  Please do not ask for Windows support.
 
 ## INSTALLATION
 
