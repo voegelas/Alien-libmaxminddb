@@ -46,11 +46,9 @@ Add the library to your F<dist.ini> if you use Dist::Zilla.
 
 =head1 DESCRIPTION
 
-L<MaxMind|https://www.maxmind.com/> and L<DP-IP.com|https://db-ip.com/>
-provide geolocation databases in the MaxMind DB file format format.  This Perl
-module finds or downloads and installs the C library
-L<libmaxminddb|https://github.com/maxmind/libmaxminddb>, which can read
-MaxMind DB files.
+MaxMind and DP-IP.com provide geolocation databases in the MaxMind DB file
+format format.  This Perl module finds or downloads and installs the C library
+libmaxminddb, which can read MaxMind DB files.
 
 =head1 SUBROUTINES/METHODS
 
@@ -86,11 +84,12 @@ Andreas Vögele E<lt>voegelas@cpan.orgE<gt>
 
 =head1 BUGS AND LIMITATIONS
 
-If libmaxminddb and its development files aren't present, the library is
-fetched from GitHub and built with L<Alien::Build>, which requires the build
-tools from L<Alien::MSYS> on Windows.  If Alien::Build fails to build
-libmaxminddb, make sure that you have a clean build environment with nothing
-but Perl and the build tools in your path.
+If L<libmaxminddb|https://github.com/maxmind/libmaxminddb> and its development
+files aren't present, the library is fetched from GitHub and built with
+L<Alien::Build>, which requires the build tools from L<Alien::MSYS> on
+Windows.  If Alien::Build fails to build libmaxminddb, make sure that you have
+a clean build environment with nothing but Perl and the build tools in your
+path.
 
 =head1 LICENSE AND COPYRIGHT
 
