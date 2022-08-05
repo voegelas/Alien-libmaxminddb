@@ -69,13 +69,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://gitlab.com/voegelas/alien-libmaxminddb/-/issues"
+         "web" : "https://github.com/voegelas/Alien-libmaxminddb/issues"
       },
-      "homepage" : "https://gitlab.com/voegelas/alien-libmaxminddb",
+      "homepage" : "https://github.com/voegelas/Alien-libmaxminddb/wiki",
       "repository" : {
          "type" : "git",
-         "url" : "https://gitlab.com/voegelas/alien-libmaxminddb.git",
-         "web" : "https://gitlab.com/voegelas/alien-libmaxminddb/-/tree/main"
+         "url" : "https://github.com/voegelas/Alien-libmaxminddb.git",
+         "web" : "https://github.com/voegelas/Alien-libmaxminddb"
       }
    },
    "version" : "1.006",
