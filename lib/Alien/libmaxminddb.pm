@@ -87,6 +87,18 @@ path.
 
 L<Alien::Base>, L<IP::Geolocation::MMDB>
 
+=head1 ACKNOWLEDGEMENTS
+
+Thanks to all who have contributed patches and reported bugs:
+
+=over
+
+=item *
+
+Alex Granovskiy
+
+=back
+
 =head1 AUTHOR
 
 Andreas Vögele E<lt>voegelas@cpan.orgE<gt>
