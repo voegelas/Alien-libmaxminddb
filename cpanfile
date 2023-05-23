@@ -20,8 +20,9 @@ on 'test' => sub {
 };
 
 on 'configure' => sub {
-  requires "Alien::Build" => "1.19";
+  requires "Alien::Build" => "2.57";
   requires "Alien::Build::MM" => "0.32";
+  requires "Alien::Build::Plugin::Digest::Negotiate" => "0";
   requires "ExtUtils::MakeMaker" => "6.52";
 };
 
