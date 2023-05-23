@@ -26,6 +26,7 @@ jobs:
           cpanm --quiet --notest --installdeps .
       - name: Run tests
         run: |
+          $env:ALIEN_DOWNLOAD_RULE = 'digest'
           perl Makefile.PL
           make test
       - name: Test IP::Geolocation::MMDB

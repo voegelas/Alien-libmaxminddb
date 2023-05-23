@@ -9,6 +9,7 @@ install:
   - cpanm --quiet --notest --installdeps .
 
 build_script:
+  - set ALIEN_DOWNLOAD_RULE=digest
   - perl Makefile.PL
   - gmake
 
