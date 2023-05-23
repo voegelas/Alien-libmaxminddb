@@ -6,6 +6,7 @@ plugin 'PkgConfig' => 'libmaxminddb';
 
 share {
   start_url 'https://github.com/maxmind/libmaxminddb/releases/download/1.10.0/libmaxminddb-1.10.0.tar.gz';
+  digest SHA256 => '5e6db72df423ae225bfe8897069f6def40faa8931f456b99d79b8b4d664c6671';
   plugin 'Download';
   plugin 'Extract' => 'tar.gz';
   plugin 'Build::Autoconf';
