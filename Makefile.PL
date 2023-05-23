@@ -18,8 +18,9 @@ my %WriteMakefileArgs = (
     "File::Spec::Functions" => 0
   },
   "CONFIGURE_REQUIRES" => {
-    "Alien::Build" => "1.19",
+    "Alien::Build" => "2.57",
     "Alien::Build::MM" => "0.32",
+    "Alien::Build::Plugin::Digest::Negotiate" => 0,
     "ExtUtils::MakeMaker" => "6.52"
   },
   "DISTNAME" => "Alien-libmaxminddb",
