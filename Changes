@@ -1,5 +1,9 @@
 Revision history for Alien::libmaxminddb
 
+1.013  2023-11-08 00:01:48 CET
+
+  - Download libmaxminddb version 1.8.0
+
 1.012  2023-01-19 11:28:04 CET
 
   - Revise the workaround for OpenBSD Clang
