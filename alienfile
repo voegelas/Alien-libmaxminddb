@@ -12,8 +12,8 @@ share {
   patch \&patch_build;
   build [
     '%{configure} --disable-binaries --disable-tests --disable-shared',
-    '%{make}',
-    '%{make} install',
+    '%{make} man1_MANS= man3_MANS=',
+    '%{make} install man1_MANS= man3_MANS=',
   ];
 };
 
