@@ -8,7 +8,8 @@ test:
       when: never
     - when: always
   script:
-    - apt-get install -y libmaxminddb-dev
     - cpanm --quiet --notest --installdeps .
     - perl Makefile.PL
     - cover -test
+    - sudo make install
+    - cpanm IP::Geolocation::MMDB
