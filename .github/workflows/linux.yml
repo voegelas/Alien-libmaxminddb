@@ -19,11 +19,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: perl -V
-        run: perl -V
       - name: Install dependencies
         run: |
-          apt-get install -y libmaxminddb-dev
           cpanm --quiet --notest --installdeps .
       - name: Run tests
         env:
@@ -32,3 +29,7 @@ jobs:
         run: |
           perl Makefile.PL
           cover -test -report coveralls
+      - name: Test IP::Geolocation::MMDB
+        run: |
+          sudo make install
+          cpanm IP::Geolocation::MMDB

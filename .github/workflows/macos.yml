@@ -1,5 +1,5 @@
 ---
-name: windows
+name: macos
 
 on:
   push:
@@ -12,17 +12,13 @@ on:
 jobs:
   perl:
 
-    runs-on: windows-latest
+    runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Perl
-        run: |
-          choco install strawberryperl
-          echo "C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
       - name: Install dependencies
         run: |
-          cpanm --quiet --notest Alien::MSYS
+          brew install cpanminus
           cpanm --quiet --notest --installdeps .
       - name: Run tests
         run: |
@@ -30,5 +26,5 @@ jobs:
           make test
       - name: Test IP::Geolocation::MMDB
         run: |
-          make install
+          sudo make install
           cpanm IP::Geolocation::MMDB
