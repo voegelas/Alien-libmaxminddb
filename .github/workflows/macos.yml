@@ -19,6 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           brew install cpanminus
+          cpanm --quiet --notest IO::Socket::SSL Mozilla::CA URI
           cpanm --quiet --notest --installdeps .
       - name: Run tests
         run: |
