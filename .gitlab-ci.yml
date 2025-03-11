@@ -8,7 +8,6 @@ test:
       when: never
     - when: always
   script:
-    - cpanm --quiet --notest --installdeps .
     - perl Makefile.PL
     - cover -test
     - sudo make install
