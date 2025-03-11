@@ -11,9 +11,7 @@ on:
 
 jobs:
   perl:
-
     runs-on: macos-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
@@ -28,4 +26,4 @@ jobs:
       - name: Test IP::Geolocation::MMDB
         run: |
           sudo make install
-          cpanm IP::Geolocation::MMDB
+          cpanm -v IP::Geolocation::MMDB
