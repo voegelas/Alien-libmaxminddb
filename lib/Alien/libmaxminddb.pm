@@ -6,7 +6,7 @@ use 5.016;
 use warnings;
 use utf8;
 
-our $VERSION = 1.019;
+our $VERSION = 2.000;
 
 use File::Spec qw();
 use JSON::PP   qw();
@@ -110,7 +110,7 @@ Alien::libmaxminddb - Find or install libmaxminddb
 
 =head1 VERSION
 
-version 1.019
+version 2.000
 
 =head1 SYNOPSIS
 

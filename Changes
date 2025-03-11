@@ -1,5 +1,9 @@
 Revision history for Alien::libmaxminddb
 
+2.000  2025-03-11 20:00:15 CET
+
+  - Get rid of Alien::Build and Alien::MSYS
+
 1.019  2025-03-08 20:32:45 CET
 
   - Don't use Alien::Build::Plugin::Build::Autoconf as Path::Tiny may fail on
