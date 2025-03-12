@@ -268,7 +268,7 @@ sub create_library {
     my $lib_file = 'lib' . $basename . $lib_ext;
 
     my $ar = $Config{ar};
-    system($ar, 'r', $lib_file, @{$obj_files}) == 0
+    system($ar, 'rc', $lib_file, @{$obj_files}) == 0
         or die "Cannot create $lib_file";
 
     return $lib_file;
