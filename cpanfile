@@ -3,7 +3,7 @@
 
 requires "File::Spec" => "0";
 requires "JSON::PP" => "0";
-requires "perl" => "5.016";
+requires "perl" => "5.014";
 requires "utf8" => "0";
 requires "warnings" => "0";
 

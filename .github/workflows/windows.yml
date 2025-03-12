@@ -13,7 +13,7 @@ jobs:
   perl:
     strategy:
       matrix:
-        perl: ["5.40", "5.16"]
+        perl: ["5.40", "5.14"]
         distribution: ["default", "strawberry"]
         exclude:
           - distribution: strawberry

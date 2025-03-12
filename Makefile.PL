@@ -5,7 +5,7 @@
 use strict;
 use warnings;
 
-use 5.016;
+use 5.014;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
@@ -22,7 +22,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Alien-libmaxminddb",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.016",
+  "MIN_PERL_VERSION" => "5.014",
   "NAME" => "Alien::libmaxminddb",
   "PREREQ_PM" => {
     "File::Spec" => 0,
