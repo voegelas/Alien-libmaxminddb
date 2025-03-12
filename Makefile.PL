@@ -43,8 +43,8 @@ my %WriteMakefileArgs = (
 
 %WriteMakefileArgs = (
     %WriteMakefileArgs,
-    PL_FILES => {'libmaxminddb.PL' => 'done'},
-    clean => {FILES => 'done'},
+    PL_FILES => {'libmaxminddb.PL' => 'done.txt'},
+    clean => {FILES => 'config.h done.txt'},
 );
 
 my %FallbackPrereqs = (

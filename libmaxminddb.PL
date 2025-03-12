@@ -389,7 +389,7 @@ sub install {
 }
 
 sub done {
-    open my $out, '>', 'done';
+    open my $out, '>', 'done.txt';
     close $out;
 }
 
