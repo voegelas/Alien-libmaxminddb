@@ -109,6 +109,10 @@ sub new {
     my $self = bless \%attrs, $class;
 
     $self->{builder} = ExtUtils::CBuilder->new;
+    if (!$self->{builder}->have_compiler) {
+        warn "Error: No C compiler found.\n";
+        die "OS unsupported\n";
+    }
 
     return $self;
 }
