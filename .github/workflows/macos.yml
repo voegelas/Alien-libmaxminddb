@@ -26,4 +26,4 @@ jobs:
       - name: Test IP::Geolocation::MMDB
         run: |
           sudo make install
-          cpanm -v IP::Geolocation::MMDB
+          cpanm --test-only IP::Geolocation::MMDB

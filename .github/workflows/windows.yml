@@ -41,4 +41,4 @@ jobs:
         if: ${{ matrix.perl >= 5.34 }}
         run: |
           ${{ env.MAKECMD }} install
-          cpanm IP::Geolocation::MMDB
+          cpanm --test-only IP::Geolocation::MMDB
