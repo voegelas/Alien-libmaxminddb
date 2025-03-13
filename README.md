@@ -8,8 +8,8 @@ DB files.
 
 ## DEPENDENCIES
 
-Install the packages pkgconf and libmaxminddb-devel or libmaxminddb-dev if you
-would like to use your operating system's libmaxminddb library.
+Install pkg-config and libmaxminddb-devel or libmaxminddb-dev if you would like
+to use your operating system's libmaxminddb library.
 
 ## INSTALLATION
 

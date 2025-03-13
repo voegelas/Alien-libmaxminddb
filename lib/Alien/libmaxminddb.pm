@@ -180,9 +180,8 @@ None.
 
 =head1 DEPENDENCIES
 
-Install the packages C<pkgconf> and C<libmaxminddb-devel> or
-C<libmaxminddb-dev> if you would like to use your operating system's
-libmaxminddb library.
+Install C<pkg-config> and C<libmaxminddb-devel> or C<libmaxminddb-dev> if you
+would like to use your operating system's libmaxminddb library.
 
 =head1 INCOMPATIBILITIES
 
