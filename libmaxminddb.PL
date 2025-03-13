@@ -14,8 +14,7 @@ sub new {
 
     my $self = bless \%attrs, $class;
 
-    my @programs = qw(pkgconf pkg-config);
-    $self->{pkgconf} = $self->find_pkgconf(@programs);
+    $self->{pkgconf} = $self->find_pkgconf(qw(pkgconf pkg-config));
 
     return $self;
 }
@@ -26,7 +25,7 @@ sub find_pkgconf {
     my $devnull = File::Spec->devnull;
 
     for my $pkgconf (@programs) {
-        my $version = `$pkgconf --version 2>$devnull`;
+        my $output = `$pkgconf --version 2>$devnull`;
         if ($? == 0) {
             return $pkgconf;
         }
@@ -44,9 +43,10 @@ sub pkgconf {
 
     my $pkgconf = $self->{pkgconf};
     if (defined $pkgconf) {
-        my $cmd = $pkgconf . ' ' . join(' ', @options) . ' ' . $module;
-        chomp(my $output = `$cmd 2>$devnull`);
+        my $cmd    = $pkgconf . ' ' . join(' ', @options) . ' ' . $module;
+        my $output = `$cmd 2>$devnull`;
         if ($? == 0) {
+            chomp $output;
             return 1, $output;
         }
     }
@@ -108,11 +108,28 @@ sub new {
 
     my $self = bless \%attrs, $class;
 
-    $self->{builder} = ExtUtils::CBuilder->new;
-    if (!$self->{builder}->have_compiler) {
-        warn "Error: No C compiler found.\n";
+    my $builder = ExtUtils::CBuilder->new;
+    if (!$builder->have_compiler) {
+        warn "Error: No C compiler found\n";
         die "OS unsupported\n";
     }
+
+    my $is_little_endian = 1;
+    my $byteorder        = $Config{byteorder};
+    if (!defined $byteorder) {
+        warn "\$Config{byteorder} is undefined\n";
+        die "OS unsupported\n";
+    }
+    if ($byteorder == 4321 || $byteorder == 87654321) {
+        $is_little_endian = 0;
+    }
+    elsif (!($byteorder == 1234 || $byteorder == 12345678)) {
+        warn "Unknown byte order: $byteorder\n";
+        die "OS unsupported\n";
+    }
+
+    $self->{builder}          = $builder;
+    $self->{is_little_endian} = $is_little_endian;
 
     return $self;
 }
@@ -214,23 +231,10 @@ CODE
     return $ok;
 }
 
-sub is_little_endian {
-    my ($self) = @_;
-
-    my $byteorder = $Config{byteorder};
-    if ($byteorder == 4321 || $byteorder == 87654321) {
-        return 0;
-    }
-    elsif (!($byteorder == 1234 || $byteorder == 12345678)) {
-        warn "Unknown byte order: $byteorder";
-    }
-    return 1;
-}
-
 sub create_config_h {
     my ($self, $filename, $cflags) = @_;
 
-    my $little_endian = $self->is_little_endian ? 1 : 0;
+    my $little_endian = $self->{is_little_endian} ? 1 : 0;
 
     open my $out, '>', $filename
         or die "Cannot create $filename";
