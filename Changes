@@ -1,5 +1,9 @@
 Revision history for Alien::libmaxminddb
 
+2.002  2025-03-17 15:46:50 CET
+
+  - Improve the search for the dist share directory
+
 2.001  2025-03-15 20:41:39 CET
 
   - Check for -lm and -lsocket
