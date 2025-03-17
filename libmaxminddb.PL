@@ -280,7 +280,7 @@ sub check_libm {
 
 int main(void) {
     (void) fabs(0.0);
-    (void) fabsf(0.0);
+    (void) fabsf(0.0f);
     return 0;
 }
 CODE
