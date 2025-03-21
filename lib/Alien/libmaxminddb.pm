@@ -117,6 +117,9 @@ Add the library to your F<dist.ini> if you use Dist::Zilla.
   [Prereqs / ConfigureRequires]
   Alien::libmaxminddb = 0
 
+  [Prereqs / BuildRequires]
+  Alien::libmaxminddb = 0
+
   [MakeMaker::Awesome]
   header = use Config;
   header = use Alien::libmaxminddb;
