@@ -10,5 +10,5 @@ test:
   script:
     - perl Makefile.PL
     - cover -test
-    - sudo make install
+    - make install
     - cpanm --test-only IP::Geolocation::MMDB

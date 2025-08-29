@@ -11,11 +11,17 @@ on:
 
 jobs:
   perl:
+
     runs-on: ubuntu-latest
+
     container:
       image: voegelas/debian-devel
+      options: --user root
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - name: perl -V
+        run: perl -V
       - name: Run tests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,5 +31,5 @@ jobs:
           cover -test -report coveralls
       - name: Test IP::Geolocation::MMDB
         run: |
-          sudo make install
+          make install
           cpanm --test-only IP::Geolocation::MMDB
