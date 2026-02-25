@@ -210,7 +210,7 @@ Andreas Vögele E<lt>voegelas@cpan.orgE<gt>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2025 Andreas Vögele
+Copyright (C) 2026 Andreas Vögele
 
 This module is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

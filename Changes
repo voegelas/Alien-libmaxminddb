@@ -1,7 +1,8 @@
 Revision history for Alien::libmaxminddb
 
-2.002  2025-03-17 15:46:50 CET
+2.002  2026-02-25 02:06:07 CET
 
+  - Update for libmaxminddb 1.13.1
   - Improve the search for the dist share directory
 
 2.001  2025-03-15 20:41:39 CET
